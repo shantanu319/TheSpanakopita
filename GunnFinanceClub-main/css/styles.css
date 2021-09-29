@@ -1,0 +1,661 @@
+html, head, body {
+    /* Removed height:100% because the navbar doesn't stick */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #27b95f;
+    --color2: #000000;
+    --color3: #27b95f;
+    --color4: rgb(236, 238, 243);
+}
+
+/* --------------------- Home/Index Page --------------------- */
+
+div.mainContent {
+    margin-top: 12%;
+    min-height: calc(100vh - 100px);
+}
+
+header.siteNavHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    background-color:rgb(236,238,243);
+    border-bottom: 2px solid #27b95f;
+    
+
+    /* Fixes navbar at the top */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.8s;
+
+    z-index: 500;
+}
+
+a.navTitleRef {
+    text-decoration: none;
+}
+
+h1.navMainTitle {
+    color: var(--color1);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    display:inline-block; 
+}
+
+nav.navbarItems li a {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: gray;
+    transition: all 0.2s ease 0s;
+}
+
+ul.navbarLinks {
+    list-style: none;
+}
+
+ul.navbarLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+ul.navbarLinks li a:hover {
+    text-decoration: underline;
+}
+
+li.navbarDivider {
+    color: var(--color1);
+    cursor: default;
+    font-weight: bold;
+}
+
+section.homePageContent {
+    margin: 0 auto;
+    padding: 0 0 0 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    line-height: 1;
+    width: 100%;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 50%;
+    grid-gap: 1em;
+}
+
+section.homeContentLeft {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+section.homeContentRight {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+a.homeJoinNow {
+    display:inline-block;
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    padding-top: 14px;
+    background-color: var(--color1);
+    border:1.5px solid var(--color1);
+    outline: none;
+    margin:6px 6px 0px 6px;
+    border-radius:0.5em;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+a.homeJoinNow:hover {
+    border-color:rgb(236,238,243);;
+    box-shadow: 0 0 0 3px var(--color1);
+}
+
+div.wbquote {
+    width: 100%;
+    background-image: url('../images/wbquotebg.jpeg');
+    justify-content: center;
+    display: flex;
+    height: auto;
+}
+
+h1.homePageContentTitle {
+    color: white;
+    margin: 0;
+    padding: 80px;
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+p.homePageContentText {
+    color: white;
+    margin: 0;
+    padding: 80px;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    font-size: 20px;
+}
+
+h1.homeTitle {
+    color: var(--color1);
+    font-size: 75px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: none;
+}
+
+p.homeSubTitle {
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 42px;
+    color: black;
+}
+
+div.homePageWave {
+    margin: 0;
+    margin-top: 60px;
+}
+
+section.aboutPage {
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
+
+section.aboutPage article {
+    height: calc(100% - 30px);
+}
+
+div.mainContent2 {
+    min-height: 100vh;
+}
+
+div.bckgrnd {
+    background-image: url('../images/homebg.jpg');
+    background-size: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+div.aboutUsBackgroundDiv {
+    background-color: var(--color1);
+    min-height: 350px;
+    display: flex;
+    top: 0;
+}
+
+section.aboutUsBackgroundSection {
+    margin: 0px auto;
+    margin-top: 185px;
+    padding: 0px 10%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+span.aboutUsTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+span.aboutUsSubTitle {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+}
+
+section.aboutUsContentSection {
+    margin: 100px 10% 10px 10%;
+    padding: 0;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+span.aboutDescriptionTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
+p.aboutDescription {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 19px;
+    line-height: 160%;
+}
+
+div.aboutUsReadyToJoinDiv {
+    background-color: #b1f0c9;
+    min-height: 200px;
+    display: flex;
+    vertical-align: center;
+}
+
+section.aboutUsReadyToJoinSection {
+    width: 100%;
+    margin: 80px 10%;
+    padding: 0;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+h1.readyToJoin {
+    margin: 0px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--color1);
+}
+
+a.aboutJoinNow {
+    float: right;
+    display:inline-block;
+    width: 200px;
+    height: 35px;
+    padding: 0;
+    padding-top: 8.5px;
+    background-color: var(--color1);
+    border:1.5px solid var(--color1);
+    outline: none;
+    margin:12px 6px 0px 6px;
+    border-radius:0.5em;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+a.aboutJoinNow:hover {
+    border-color: #b1f0c9;
+    box-shadow: 0 0 0 3px var(--color1);
+}
+
+section.joinUsBackgroundSection {
+    margin-top: 10px;
+    padding: 0px 10%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+
+    border-bottom: 1px solid#27b95f;
+}
+
+span.joinUsTitle {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--color3);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+span.joinUsSubTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+section.officerTileSection {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0px 5%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+}
+
+div.userTileBackground {
+    background-color: var(--color1);
+    border-radius: 10px;
+    width: 100%;
+}
+
+section.officerCardSection {
+    background-color: var(--color1);
+
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 10px 10px;
+    width: 100%; 
+    display: grid;
+    justify-content: center;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+img.pfp {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+
+p.pfpName {
+    display: block;
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+    font-size: 25px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p.role {
+    display: block;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0;
+    color: #ebebeb;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div.topicsBackgroundDiv {
+    background-color: var(--color1);
+    min-height: 350px;
+    display: flex;
+    top: 0;
+}
+
+section.topicsBackgroundSection {
+    margin: 0px auto;
+    margin-top: 160px;
+    margin-bottom: 30px;
+    padding: 0px 10%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+span.topicsTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+
+span.topicsSubTitle {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+}
+
+section.topicsContentSection {
+    margin: 40px 10%;
+    padding: 0;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+span.topicsDescriptionTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
+p.topicsDescription {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    line-height: 160%;
+}
+
+div.resourcesBackgroundDiv {
+    background-color: var(--color1);
+    min-height: 350px;
+    display: flex;
+    top: 0;
+}
+
+section.resourcesBackgroundSection {
+    margin: 0px auto;
+    margin-top: 160px;
+    margin-bottom: 30px;
+    padding: 0px 10%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+span.resourcesTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+
+span.resourcesSubTitle {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+}
+
+section.resourcesContentSection {
+    margin: 100px 10%;
+    padding: 0;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+span.resourcesDescriptionTitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
+p.resourcesDescription {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 19px;
+    line-height: 160%;
+}
+
+div.resourcesReadyToJoinDiv {
+    background-color: #b1f0c9;
+    min-height: 200px;
+    display: flex;
+    vertical-align: center;
+}
+
+section.resourcesReadyToJoinSection {
+    width: 100%;
+    margin: 80px 10%;
+    padding: 0;
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+a.resourcesJoinNow {
+    float: right;
+    display:inline-block;
+    width: 200px;
+    height: 35px;
+    padding: 0;
+    padding-top: 8.5px;
+    background-color: var(--color1);
+    border:1.5px solid var(--color1);
+    outline: none;
+    margin:12px 6px 0px 6px;
+    border-radius:0.5em;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+a.resourcesJoinNow:hover {
+    border-color: #b1f0c9;
+    box-shadow: 0 0 0 3px var(--color1);
+}
+
+section.resourcesTileSection {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0px 10%;
+    width: 100%; 
+    display: grid;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+}
+
+div.resourcesBackground {
+    background-color: var(--color1);
+    border-radius: 10px;
+    width: 100%;
+}
+
+section.resourcesCardSection {
+    background-color: var(--color1);
+
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 10px 10px;
+    width: 100%; 
+    height: 100%;
+    display: grid;
+    justify-content: center;
+
+    /*Define our columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+i.resourcesIcon {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+i.resourcesIcon:hover {
+    text-decoration: none;
+    color:rgb(189, 181, 181);
+}
+
+p.resourcesName {
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div.tradingCompetitions {
+    padding-top: 9%;
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    color: #27b95f;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div.tradingCompetitions span {
+    font-size: 25px;
+    color: black;
+}
