@@ -11,7 +11,7 @@ html, head, body {
 }
 
 :root {
-    --color1: #27b95f;
+    --color1: #0f702c;
     --color2: #000000;
     --color3: #27b95f;
     --color4: rgb(236, 238, 243);
@@ -31,7 +31,7 @@ header.siteNavHeader {
     padding: 5px 10%;
     background-color:rgb(236,238,243);
     border-bottom: 2px solid #27b95f;
-    
+
 
     /* Fixes navbar at the top */
     overflow: hidden;
@@ -55,7 +55,7 @@ h1.navMainTitle {
     font-weight: bold;
     margin: 0px;
     padding: 0px;
-    display:inline-block; 
+    display:inline-block;
 }
 
 nav.navbarItems li a {
@@ -103,7 +103,7 @@ section.homePageContent {
 section.homeContentLeft {
     margin: 0 auto;
     padding: 0;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -114,7 +114,7 @@ section.homeContentLeft {
 section.homeContentRight {
     margin: 0 auto;
     padding: 0;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -198,7 +198,7 @@ div.homePageWave {
 section.aboutPage {
     margin: 0 auto;
     padding: 0 0 0 0;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -232,7 +232,7 @@ section.aboutUsBackgroundSection {
     margin: 0px auto;
     margin-top: 185px;
     padding: 0px 10%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -337,7 +337,7 @@ a.aboutJoinNow:hover {
 section.joinUsBackgroundSection {
     margin-top: 10px;
     padding: 0px 10%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -352,7 +352,7 @@ span.joinUsTitle {
     display: flex;
     justify-content: center;
     font-size: 50px;
-    color: var(--color3);
+    color: #0f702c;
     margin: 0;
     margin-bottom: 10px;
 }
@@ -361,7 +361,7 @@ span.joinUsSubTitle {
     display: flex;
     justify-content: center;
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Belleza', Regular 400, serif;
     color: black;
     margin: 0;
     margin-bottom: 50px;
@@ -371,7 +371,7 @@ section.officerTileSection {
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 0px 5%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -391,7 +391,7 @@ section.officerCardSection {
     border-radius: 10px;
     margin: 0px auto;
     padding: 10px 10px;
-    width: 100%; 
+    width: 100%;
     display: grid;
     justify-content: center;
 
@@ -438,7 +438,7 @@ section.topicsBackgroundSection {
     margin-top: 160px;
     margin-bottom: 30px;
     padding: 0px 10%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -499,7 +499,7 @@ section.resourcesBackgroundSection {
     margin-top: 160px;
     margin-bottom: 30px;
     padding: 0px 10%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -597,7 +597,7 @@ section.resourcesTileSection {
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 0px 10%;
-    width: 100%; 
+    width: 100%;
     display: grid;
 
     /*Define our columns */
@@ -617,7 +617,7 @@ section.resourcesCardSection {
     border-radius: 10px;
     margin: 0px auto;
     padding: 10px 10px;
-    width: 100%; 
+    width: 100%;
     height: 100%;
     display: grid;
     justify-content: center;
