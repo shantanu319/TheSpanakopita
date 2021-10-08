@@ -20,7 +20,7 @@ html, head, body {
 /* --------------------- Home/Index Page --------------------- */
 
 div.mainContent {
-    margin-top: 12%;
+    margin-top: 100%;
     min-height: calc(100vh - 100px);
 }
 
@@ -178,7 +178,7 @@ h1.homeTitle {
     font-size: 75px;
     align-items: center;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 0%  ;
     padding: none;
 }
 
@@ -211,16 +211,21 @@ section.aboutPage article {
 }
 
 div.mainContent2 {
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
-div.bckgrnd {
-    background-image: url('../images/homebg.jpg');
+/* div.bckgrnd {
+    background-image: url('../images/SpanakopitaLogo.jpg');
     background-size: contain;
-    background-size: 100%;
+    background-size: 20%;
     background-repeat: no-repeat;
+} */
+div.leftPicture{
+  background-image: url('../images/SpanakopitaLogo.jpg');
+  background-size: contain;
+  background-size: 20%;
+  background-repeat: no-repeat;
 }
-
 div.aboutUsBackgroundDiv {
     background-color: var(--color1);
     min-height: 350px;
