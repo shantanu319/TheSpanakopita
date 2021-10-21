@@ -17,93 +17,95 @@
     <!-- Other -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/81f93d9156.js" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
     <meta charset="utf-8">
 
     <script type='module'>
-        /* Where we are putting the cards */
-        const $main = document.querySelector('main');
 
-        /* Finding the input elements and putting them into variables */
-        const $sortInputs = document.querySelectorAll('input[name=sort]')
-        const $riskInputs = document.querySelectorAll('input[name=risk]')
+         /* Where we are putting the cards */
+         const $main = document.querySelector('main');
+
+         /* Finding the input elements and putting them into variables */
+         const $sortInputs = document.querySelectorAll('input[name=sort]')
+         const $riskInputs = document.querySelectorAll('input[name=risk]')
 
 
-        /* The variable to store the data */
-        let data;
+         /* The variable to store the data */
+         let data;
 
-        /* Function to sort the data */
-        function sort(e) {
-            if(this.value === 'up') {
-                data.sort((a, b) => a.commonName > b.commonName ? -1 : 1);
-            } else {
-                data.sort((a, b) => a.commonName > b.commonName ? 1 : -1);
-            }
+         /* Function to sort the data */
+         function sort(e) {
+         	if(this.value === 'up') {
+         		data.sort((a, b) => a.commonName > b.commonName ? -1 : 1);
+         	} else {
+         		data.sort((a, b) => a.commonName > b.commonName ? 1 : -1);
+         	}
 
-            bindData(data)
-        }
+         	bindData(data)
+         }
 
-        /* Function to filter the data */
-        function filter(e) {
-            let filteredData;
-            if(this.value === 'all') {
-                filteredData = data;
-            } else {
-                filteredData = data.filter(item => item.conservationStatus === this.value)
-            }
-            bindData(filteredData);
-        }
+         /* Function to filter the data */
+         function filter(e) {
+         	let filteredData;
+         	if(this.value === 'all') {
+         		filteredData = data;
+         	} else {
+         		filteredData = data.filter(item => item.conservationStatus === this.value)
+         	}
+         	bindData(filteredData);
+         }
 
-        /* Function to bind a card */
-        function bindItem(item) {
-            /* Creating a new div element */
-            const div = document.createElement('div');
+         /* Function to bind a card */
+         function bindItem(item) {
+         	/* Creating a new div element */
+         	const div = document.createElement('div');
 
-            /* Injecting data into the template of our card */
-            const card = `
-                    <img src='${item.images}'>
-                    <h3>${item.articleName}</h3>
-                    <h4>${item.description}</h4>
-                    <a href='${item.links}'>Learn More</a>`;
+         	/* Injecting data into the template of our card */
+         	const card = `
+ 					<img src='${item.images}'>
+ 					<h3>${item.commonName}</h3>
+ 					<h4>${item.conservationStatus}</h4>
+ 					<a href='${item.links}'>Learn More</a>`;
 
-            /* Injecting the template into our div*/
-            div.innerHTML = card;
+         	/* Injecting the template into our div*/
+         	div.innerHTML = card;
 
-            /* Adding the card to the main element */
-            $main.appendChild(div);
-        }
+         	/* Adding the card to the main element */
+         	$main.appendChild(div);
+         }
 
-        /* Function to bind all the cards to the data */
-        function bindData(data) {
+         /* Function to bind all the cards to the data */
+         function bindData(data) {
 
-            /* Clearing out the contents in the main section */
-            $main.innerHTML = '';
+         	/* Clearing out the contents in the main section */
+         	$main.innerHTML = '';
 
-            /* Looping through each card and binding it to html */
-            data.forEach(bindItem);
+         	/* Looping through each card and binding it to html */
+         	data.forEach(bindItem);
 
-        }
+         }
 
-        async function fetchData() {
-            /* Making the request for `data.json` */
-            const response = await fetch('https://delta.gunnhigh.school/edit/spanakaopita/data.json');
+         async function fetchData() {
+         	/* Making the request for `data.json` */
+             const response = await fetch('../data.json');
 
-            /* Converting the data into a `Javascript Object` */
-            const json = await response.json();
+         	/* Converting the data into a `Javascript Object` */
+             const json = await response.json();
 
-            /* Storing the data into our variable */
-            data = json;
+         	/* Storing the data into our variable */
+             data = json;
 
-            /* Calling Bind Data */
-            bindData(data)
-        }
+         	/* Calling Bind Data */
+         	bindData(data)
+         }
 
-        /* Looping through each element and adding a click event listener */
-        $sortInputs.forEach(input => input.addEventListener('click', sort));
-        $riskInputs.forEach(input => input.addEventListener('click', filter));
+         /* Looping through each element and adding a click event listener */
+         $sortInputs.forEach(input => input.addEventListener('click', sort));
+         $riskInputs.forEach(input => input.addEventListener('click', filter));
 
-        fetchData();
+         fetchData();
 
-    </script>
+     </script>
 </head>
 
 <body>
@@ -135,68 +137,18 @@
                     </span>
                 </article>
                 <main>
-                    <div>
-                        <img src='https://images.unsplash.com/photo-1581852017103-68ac65514cf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80' >
-                        <h3>Article title</h3>
-                        <h4>Some elaborate desciption of the article</h4>
-                        <!-- link to the article page -->
-                        <a href='https://www.worldwildlife.org/species/african-elephant'>Learn More</a>
-                    </div>
+                  <div>
+            				<img src='https://images.unsplash.com/photo-1581852017103-68ac65514cf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80' >
+            				<h3>African Elephant</h3>
+            				<h4></h4>
+            				<a href='https://www.worldwildlife.org/species/african-elephant'>Learn More</a>
+            			</div>
                 </main>
                 <article>
                     <!-- empty -->
                 </article>
             </section>
         </div>
-
-        <!-- <section class="topicsContentSection">
-            <article>
-                <span class="topicsDescriptionTitle">What is Investing about?</span>
-            </article>
-
-            <article>
-                <p class="topicsDescription">
-                    Investing is expanding money with the expectation of profit by using it to develop a company. When we teach students about teaching, we go over all the steps required to research and identify great companies, and the types of investing strategies. In this process, students get an understanding of the corporate world: not only do they focus on the financial aspects of companies, they also understand marketing, technology, Customer Relations Management, E-commerce, etc. as they research the wide range of business models of companies.
-                </p>
-            </article>
-        </section>
-
-        <section class="topicsContentSection">
-            <article>
-                <span class="topicsDescriptionTitle">What is Personal Finance about?</span>
-            </article>
-
-            <article>
-                <p class="topicsDescription">
-                    Personal Finance is about learning all the financial concepts that will help students sustain themselves financially in the future and achieve financial freedom. Most students are unaware of personal finance topics like asset classes, checking accounts vs. savings accounts, and how credit and debit works. We go over all of these concepts to help students in their future!
-                </p>
-            </article>
-        </section>
-
-        <section class="topicsContentSection">
-            <article>
-                <span class="topicsDescriptionTitle">What is Economics about?</span>
-            </article>
-
-            <article>
-                <p class="topicsDescription">
-                    Economics is the study of allocation of resources and its consumption. Gunn High School offers Economics courses, so we do not go into much depth in this topic. We go over basic concepts that will help foster an understanding of personal finance and investing like interest rates, what currency is, inflation, and the Federal Reserve.
-                </p>
-            </article>
-        </section>
-
-        <section class="topicsContentSection" style="padding-bottom: 60px;">
-            <article>
-                <span class="topicsDescriptionTitle">What Programs Do We Have?</span>
-            </article>
-
-            <article>
-                <p class="topicsDescription">
-                    We offer students with the opportunity to get involved in paper trading competitions which allows them to practice their concepts without the risk of loosing money. However, we do encourage students to invest real money. Additionally, we will host interactive competitions like stock pitch competitions, investment strategy pitch competitions, and case competitions to get a better understanding of the business world as a whole.
-                </p>
-            </article>
-        </section>
-    </div> -->
 
     <section class="mainFooterSection">
         <article>
